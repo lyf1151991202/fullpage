@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/jquery.fullpage.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<header class="hd">
+    <div class="inner">
+        <a class="logo">
+            <img src="img/u=140901765,2921117350&fm=26&gp=0.jpg" alt="">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+                <li data-menuanchor="page2"><a href="#page2">关于我</a></li>
+                <li data-menuanchor="page3"><a href="#page3">我的技能</a></li>
+                <li data-menuanchor="page4"><a href="#page4">我的作品</a></li>
+                <li data-menuanchor="page5"><a href="#page5">我的作品</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div class="con">
+    <div class="section s1 active">
+        <div class="s1_main">
+            <img src="img/u=214710132,527825098&fm=26&gp=0.png" alt="">
+            <div class="welcome">————  W e l c o m e  ————</div>
+            <div class="main_name">我  是  刘  雅  芳</div>
+            <div class="main_developer"> Web Developer</div>
+        </div>
+    </div>
+
+    <div class="section s2">
+        <div class="left">
+            <div class="about_photo">
+                <img src="img/u=140901765,2921117350&fm=26&gp=0.jpg" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <div class="about_me">
+                <div class="about_box">
+                    <div class="about_son">
+                        <div class="son_name">姓名</div>
+                        <div class="son_content">刘雅芳</div>
+                    </div>
+                    <div class="about_son">
+                        <div class="son_name">性别</div>
+                        <div class="son_content">女</div>
+                    </div>
+                    <div class="about_son">
+                        <div class="son_name">地址</div>
+                        <div class="son_content">山西省 晋城市</div>
+                    </div>
+                    <div class="about_son">
+                        <div class="son_name">联系方式</div>
+                        <div class="son_content">181********</div>
+                    </div>
+                    <div class="about_son">
+                        <div class="son_name">电子邮箱</div>
+                        <div class="son_content">11********@qq.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg"><img src="picture/sc2.png"></div>
+    </div>
+
+    <div class="section s3">
+        <div class="left">
+            <div id="main" style="width: 600px;height:400px;"></div>
+        </div>
+        <div class="right">
+            <h1>My skill</h1>
+            <p>Html<br>css</p>
+            <a>php</a>
+        </div>
+        <div class="bg"><img src="picture/sc3.png"></div>
+    </div>
+
+    <div class="section s4">
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="img/img1.jpg">
+                    <p>天气App</p>
+                    <a href="https://lyf1151991202.github.io/newweather/">https://lyf1151991202.github.io/newweather/</a>
+                </li>
+                <li>
+                    <img src="img/img9.jpg">
+                    <p>小米</p>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <img src="img/timg (2).jpg">
+                    <p>苏宁</p>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1>我的作品</h1>
+            <p>小米，苏宁，天气App</p>
+            <a>网页</a>
+        </div>
+        <div class="bg"><img src="picture/sc4.png"></div>
+    </div>
+
+    <div class="section s5">
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="img/timg (3).jpg">
+                    <p>素馨花卉</p>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <img src="img/timg (4).jpg">
+                    <p>外卖app</p>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <img src="img/timg (1).jpg">
+                    <p>凡客</p>
+                    <a href="https://lyf1151991202.github.io/fanke/">https://lyf1151991202.github.io/fanke/</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1>我的作品</h1>
+            <p>素馨花卉</p>
+            <a>凡客</a>
+        </div>
+        <div class="bg"><img src="picture/sc5.png"></div>
+    </div>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullpage.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script>
+    $(function(){
+        $('.con').fullpage({
+            navigation: true,
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+            menu: '.menu',
+            navigationTooltips: ['首页','我的技能','我的作品','我的爱好','留言',],
+            verticalCentered:false,
+
+        });
+
+    });
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        backgroundColor: 'rgba(0,0,255,.5)',
+
+        title: {
+            text: 'My skill',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                color: '#ccc'
+            }
+        },
+
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        visualMap: {
+            show: false,
+            min: 80,
+            max: 600,
+            inRange: {
+                colorLightness: [0, 1]
+            }
+        },
+        series : [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius : '55%',
+                center: ['50%', '50%'],
+                data:[
+                    {value:335, name:'html'},
+                    {value:310, name:'css'},
+                    {value:274, name:'JavaScript'},
+                    {value:235, name:'photoshop'},
+                    {value:400, name:'PHP'}
+                ].sort(function (a, b) { return a.value - b.value; }),
+                roseType: 'radius',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return Math.random() * 200;
+                }
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>
