@@ -1,0 +1,275 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+::-moz-selection {
+    background: #338FFF;
+    color: #fff;
+}
+
+::-webkit-selection {
+    background: #338FFF;
+    color: #fff;
+}
+
+::selection {
+    background: #338FFF;
+    color: #fff;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+.response-img {
+    display: block;
+    max-width: 100%;
+}
+
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body {
+    width: 100%;
+}
+
+.viewBlock {
+    width: 100%;
+    position: relative;
+    background: url("../img/1242397_095734011_2.jpg") no-repeat center/cover;
+    padding: 40px 0;
+}
+
+.bookBox {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    margin: 30px auto;
+    -webkit-perspective-origin: 50% 60%;
+    perspective-origin: 50% 60%;
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
+    background: url(../img/bookbg.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.bookBox:hover .lastBtn {
+    display: block;
+}
+
+.bookBox:hover .nextBtn {
+    display: block;
+}
+
+.bookPage {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all linear 2s;
+    -moz-transition: all linear 2s;
+    -ms-transition: all linear 2s;
+    -o-transition: all linear 2s;
+    transition: all linear 2s;
+    background: url(../img/bookleft.png) no-repeat;
+    background-size: 479.26px 483.33px;
+    background-position: 20.74px 8.3px;
+}
+
+.bookPage img {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 400px;
+}
+
+.bookWord {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    font-size: 35px;
+    line-height: 40px;
+    backface-visibility: visible;
+    background-color: #f0f0f0;
+    word-break: break-all;
+}
+
+.bookWord .picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+    margin: 10px auto 40px;
+    background: url('../img/u=140901765,2921117350&fm=26&gp=0.jpg') no-repeat center/cover;
+    box-shadow: 0 0 10px skyblue, 0 0 50px skyblue;
+    animation: lightBox 4s infinite linear;
+}
+
+.bookWord h1 {
+    display: block;
+    /*渐变背景*/
+    background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+    #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+    color: transparent;
+    /*文字填充色为透明*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /*背景剪裁为文字，只将文字显示为背景*/
+    background-size: 200% 100%;
+    /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+    /* 动画 */
+    animation: masked-animation 4s infinite linear;
+    font-size: 30px;
+    line-height: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bookWord p {
+    text-align: center;
+    color: #4285F4;
+    font-weight: 700;
+    text-shadow: 0 0 10px skyblue, 0 0 50px skyblue;
+    animation: lightText 4s infinite linear;
+}
+
+.bookWord p span {
+    color: #907C75;
+}
+
+@keyframes masked-animation {
+    0% {
+        background-position: 0 0;
+        /*background-position 属性设置背景图像的起始位置。*/
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes lightText {
+    0% {
+        text-shadow: 0 0 10px #FBBC05, 0 0 50px #FBBC05;
+    }
+    50% {
+        text-shadow: 0 0 10px #4285F4, 0 0 50px #4285F4;
+    }
+    100% {
+        text-shadow: 0 0 10px #FBBC05, 0 0 50px #FBBC05;
+    }
+}
+
+@keyframes lightBox {
+    0% {
+        box-shadow: 0 0 10px #FBBC05, 0 0 50px #FBBC05;
+    }
+    50% {
+        box-shadow: 0 0 10px #4285F4, 0 0 50px #4285F4;
+    }
+    100% {
+        box-shadow: 0 0 10px #FBBC05, 0 0 50px #FBBC05;
+    }
+}
+
+.frist {
+    left: 0;
+    z-index: 1;
+}
+
+.frist img {
+    z-index: 1;
+}
+
+.last {
+    right: 0;
+    z-index: 1;
+}
+
+.last p {
+    z-index: 1;
+}
+
+.runPage {
+    right: 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.runPage,
+.bookPage:last-child {
+    background: url(../img/bookright.png) no-repeat;
+    background-size: 479.26px 483.33px;
+    background-position: 0 8.3px;
+}
+
+.runClass {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.lastBtn,
+.nextBtn {
+    display: none;
+    position: absolute;
+    top: 200px;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 50px;
+    line-height: 100px;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.lastBtn {
+    left: 0;
+}
+
+.nextBtn {
+    right: 0;
+}
+
+.canvasBox {
+    display: block;
+    width: 158px;
+    height: 158px;
+}
+
+.pageNumber {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    font-size: 20px !important;
+    line-height: 30px;
+}

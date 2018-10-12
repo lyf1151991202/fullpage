@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="icon" href="img/u=140901765,2921117350&fm=26&gp=0.jpg">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_864187_8b3wkgcwj8n.css">
     <link href="css/jquery.fullpage.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/book.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -15,11 +21,11 @@
         </a>
         <nav>
             <ul class="menu">
-                <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
-                <li data-menuanchor="page2"><a href="#page2">关于我</a></li>
-                <li data-menuanchor="page3"><a href="#page3">我的技能</a></li>
-                <li data-menuanchor="page4"><a href="#page4">我的作品</a></li>
-                <li data-menuanchor="page5"><a href="#page5">我的作品</a></li>
+                <li data-menuanchor="page1" class="active"><a href="#page1">基本信息</a></li>
+                <li data-menuanchor="page2"><a href="#page2">专业技能</a></li>
+                <li data-menuanchor="page3"><a href="#page3">我的作品</a></li>
+                <li data-menuanchor="page4"><a href="#page4">联系我</a></li>
+                <!-- <li data-menuanchor="page5"><a href="#page5">我的作品</a></li> -->
             </ul>
         </nav>
     </div>
@@ -28,213 +34,152 @@
 
 <div class="con">
     <div class="section s1 active">
-        <div class="s1_main">
-            <img src="img/u=214710132,527825098&fm=26&gp=0.png" alt="">
-            <div class="welcome">————  W e l c o m e  ————</div>
-            <div class="main_name">我  是  刘  雅  芳</div>
-            <div class="main_developer"> Web Developer</div>
-        </div>
-    </div>
-
-    <div class="section s2">
-        <div class="left">
-            <div class="about_photo">
-                <img src="img/u=140901765,2921117350&fm=26&gp=0.jpg" alt="">
-            </div>
-        </div>
-        <div class="right">
-            <div class="about_me">
-                <div class="about_box">
-                    <div class="about_son">
-                        <div class="son_name">姓名</div>
-                        <div class="son_content">刘雅芳</div>
+        <div id="knowledge" class="viewBlock">
+            <div class="bookBox">
+                <a class="lastBtn iconfont icon-zuoyou"></a>
+                <a class="nextBtn iconfont icon-zuoyou1"></a>
+                <div class="bookPage frist">
+                    <img src="img/u=1654937742,1393289912&fm=26&gp=0.jpg"/>
+                </div>
+                <div class="bookPage runPage">
+                    <div class="bookWord">
+                        <div class="picture"></div>
+                        <p><span>姓名：</span>刘雅芳</p>
+                        <p><span>性别：</span>女</p>
+                        <p><span>年龄：</span>22岁</p>
+                        <span class="pageNumber">1</span>
                     </div>
-                    <div class="about_son">
-                        <div class="son_name">性别</div>
-                        <div class="son_content">女</div>
+                    <img src="img/u=1654937742,1393289912&fm=26&gp=0.jpg"/>
+                </div>
+                <div class="bookPage runPage">
+                    <div class="bookWord">
+                        <h1>基本信息</h1>
+                        <p><span>学历：</span>本科</p>
+                        <p><span>毕业院校：</span>吕梁学院</p>
+                        <p><span>专业：</span>计算机科学与技术</p>
+                        <p><span>籍贯：</span>山西省晋城市</p>
+                        <span class="pageNumber">2</span>
                     </div>
-                    <div class="about_son">
-                        <div class="son_name">地址</div>
-                        <div class="son_content">山西省 晋城市</div>
+                    <img src="img/u=1654937742,1393289912&fm=26&gp=0.jpg"/>
+                </div>
+                <div class="bookPage runPage">
+                    <div class="bookWord">
+                        <h1>自我评价</h1>
+                        <p>
+                            &nbsp;&nbsp;诚实守住，工作严谨踏实，认真负责，处事机灵。拥有积极向上的生活态度和广泛的兴趣爱好，具有很好的心理素质和吃苦耐劳的精神，对事有自已的见解，并有较强的共事协作能力。</p>
+                        <span class="pageNumber">3</span>
                     </div>
-                    <div class="about_son">
-                        <div class="son_name">联系方式</div>
-                        <div class="son_content">181********</div>
-                    </div>
-                    <div class="about_son">
-                        <div class="son_name">电子邮箱</div>
-                        <div class="son_content">11********@qq.com</div>
+                    <img src="img/u=1654937742,1393289912&fm=26&gp=0.jpg"/>
+                </div>
+                <div class="bookPage last">
+                    <div class="bookWord">
+                        <h1>联系方式</h1>
+                        <p><span>电话：</span>181****21</p>
+                        <p><span>QQ：</span>115****202</p>
+                        <p><span>微信：</span>ly***51</p>
+                        <p><span>邮箱：</span>115****@qq.com</p>
+                        <span class="pageNumber">4</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg"><img src="picture/sc2.png"></div>
+    </div>
+
+
+    <div class="section s2">
+        <div class="s2-main">
+            <div id="main" style="width: 600px;height:400px;"></div>
+            <div class="desc">
+                <h3>我的技能展示</h3>
+                <p>1.  熟练HTML5，CSS3，JavaScript技术，开发符合W3C标准的前端网页。</p>
+                <p>2.  熟练使用jQuery，bootstrap等前端框架技术。</p>
+                <p>3.  熟悉Ajax的运行机制，能使用ajax进行数据交互。</p>
+                <p>4.  熟练使用PS，cutterman，能快速切图。</p>
+                <p>5.  精通流体布局和弹性布局，能适应各种分辨率。</p>
+            </div>
+        </div>
     </div>
 
     <div class="section s3">
-        <div class="left">
-            <div id="main" style="width: 600px;height:400px;"></div>
+        <div class="wrapper">
+            <ul class="content">
+                <li class="item">
+                    <a href="https://lyf1151991202.github.io/newxiaomi/">
+                       <div class="dir">
+                           <h3>小米</h3>
+                       </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://lyf1151991202.github.io/suning/">
+                       <div class="dir">
+                           <h3>苏宁</h3>
+                       </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://lyf1151991202.github.io/newweather/">
+                       <div class="dir">
+                           <h3>天气</h3>
+                       </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://lyf1151991202.github.io/suxing/">
+                       <div class="dir">
+                           <h3>素馨花卉</h3>
+                       </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://lyf1151991202.github.io/newfood/">
+                       <div class="dir">
+                           <h3>外卖</h3>
+                       </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://lyf1151991202.github.io/iPhone/">
+                       <div class="dir">
+                           <h3>苹果</h3>
+                       </div>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="right">
-            <h1>My skill</h1>
-            <p>Html<br>css</p>
-            <a>php</a>
-        </div>
-        <div class="bg"><img src="picture/sc3.png"></div>
     </div>
 
     <div class="section s4">
-        <div class="left">
-            <ul>
-                <li>
-                    <img src="img/img1.jpg">
-                    <p>天气App</p>
-                    <a href="https://lyf1151991202.github.io/newweather/">https://lyf1151991202.github.io/newweather/</a>
-                </li>
-                <li>
-                    <img src="img/img9.jpg">
-                    <p>小米</p>
-                    <a href="#"></a>
-                </li>
-                <li>
-                    <img src="img/timg (2).jpg">
-                    <p>苏宁</p>
-                    <a href="#"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="right">
-            <h1>我的作品</h1>
-            <p>小米，苏宁，天气App</p>
-            <a>网页</a>
-        </div>
-        <div class="bg"><img src="picture/sc4.png"></div>
-    </div>
+        <iframe src="map.html" frameborder="0" scrolling="no"></iframe>
+        <div class="formtable">
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control"  placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea class="form-control" rows="3" placeholder="Message" style="resize: none;"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg btn-block">提交</button>
+            </form>
 
-    <div class="section s5">
-        <div class="left">
-            <ul>
-                <li>
-                    <img src="img/timg (3).jpg">
-                    <p>素馨花卉</p>
-                    <a href="#"></a>
-                </li>
-                <li>
-                    <img src="img/timg (4).jpg">
-                    <p>外卖app</p>
-                    <a href="#"></a>
-                </li>
-                <li>
-                    <img src="img/timg (1).jpg">
-                    <p>凡客</p>
-                    <a href="https://lyf1151991202.github.io/fanke/">https://lyf1151991202.github.io/fanke/</a>
-                </li>
-            </ul>
         </div>
-        <div class="right">
-            <h1>我的作品</h1>
-            <p>素馨花卉</p>
-            <a>凡客</a>
-        </div>
-        <div class="bg"><img src="picture/sc5.png"></div>
     </div>
 </div>
 
+</body>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.fullpage.min.js"></script>
 <script src="js/echarts.min.js"></script>
-<script>
-    $(function(){
-        $('.con').fullpage({
-            navigation: true,
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-            menu: '.menu',
-            navigationTooltips: ['首页','我的技能','我的作品','我的爱好','留言',],
-            verticalCentered:false,
-
-        });
-
-    });
-
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('main'));
-
-    // 指定图表的配置项和数据
-    var option = {
-        backgroundColor: 'rgba(0,0,255,.5)',
-
-        title: {
-            text: 'My skill',
-            left: 'center',
-            top: 20,
-            textStyle: {
-                color: '#ccc'
-            }
-        },
-
-        tooltip : {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-
-        visualMap: {
-            show: false,
-            min: 80,
-            max: 600,
-            inRange: {
-                colorLightness: [0, 1]
-            }
-        },
-        series : [
-            {
-                name:'访问来源',
-                type:'pie',
-                radius : '55%',
-                center: ['50%', '50%'],
-                data:[
-                    {value:335, name:'html'},
-                    {value:310, name:'css'},
-                    {value:274, name:'JavaScript'},
-                    {value:235, name:'photoshop'},
-                    {value:400, name:'PHP'}
-                ].sort(function (a, b) { return a.value - b.value; }),
-                roseType: 'radius',
-                label: {
-                    normal: {
-                        textStyle: {
-                            color: 'rgba(255, 255, 255, 0.3)'
-                        }
-                    }
-                },
-                labelLine: {
-                    normal: {
-                        lineStyle: {
-                            color: 'rgba(255, 255, 255, 0.3)'
-                        },
-                        smooth: 0.2,
-                        length: 10,
-                        length2: 20
-                    }
-                },
-                itemStyle: {
-                    normal: {
-                        color: '#c23531',
-                        shadowBlur: 200,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                },
-
-                animationType: 'scale',
-                animationEasing: 'elasticOut',
-                animationDelay: function (idx) {
-                    return Math.random() * 200;
-                }
-            }
-        ]
-    };
-
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-</script>
-</body>
+<script src="js/book.js"></script>
+<script src="js/index.js"></script>
 </html>
